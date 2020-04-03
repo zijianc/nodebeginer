@@ -72,7 +72,7 @@ function upload(response, request){
 	response.end();
 	*/
 
-	//使用formidable模块
+	//使用formidable模块. formidable模块对解析上传文件数据做了抽象
 	var form = new formidable.IncomingForm();
   	console.log("about to parse");
   	form.parse(request, function(error, fields, files) {
